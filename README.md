@@ -25,13 +25,9 @@ built-young-slides-style/
 
 ## Using it
 
-**Claude.ai / Claude Desktop** — zip the skill folder and upload it:
+**Claude.ai / Claude Desktop** — [download `built-young-slides-style.zip`](https://github.com/BuiltYoung/built-young-slides-style/raw/main/built-young-slides-style.zip), then: Settings → Capabilities (make sure *Code execution and file creation* is on) → Customize → Skills → **+** → **Create skill** → upload the zip.
 
-```bash
-zip -r built-young-slides-style.zip built-young-slides-style/
-```
-
-Then: Settings → Capabilities (make sure *Code execution and file creation* is on) → Customize → Skills → **+** → **Create skill** → upload the zip.
+That zip is packaged with the skill folder as its root, which is what the uploader expects. GitHub's own **Code → Download ZIP** wraps everything in an extra `-main/` folder and will fail — use the link above.
 
 **Claude Code** — drop it into your skills directory:
 
