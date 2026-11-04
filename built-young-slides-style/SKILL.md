@@ -9,7 +9,10 @@ Apply this style to any Built Young presentation. It covers only how the deck lo
 
 ## Format
 - 16:9 widescreen (13.333 x 7.5 in). Deliver a .pptx (it imports into Google Slides), built with pptxgenjs using the helpers below, unless the user asks for another format.
-- Built Young logo top-right on every slide: the dark-text version on white slides, the white-text version on navy slides. If no logo file was provided, use the text fallback in the helpers. Never redraw the logo.
+- Built Young logo top-right on every slide. The official logos ship with this skill:
+  - `assets/logo.png` is the dark-text version, for white slides.
+  - `assets/logo-white.png` is the white-text version, for navy slides.
+  Before building, copy both files from this skill's folder into the working directory and pass them to `makeDeck`. Never redraw or recolour the logo; if the files can't be found, the helpers fall back to a text wordmark.
 
 ## Colours (fixed)
 | Token | Hex | Use |

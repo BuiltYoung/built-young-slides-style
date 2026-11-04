@@ -18,9 +18,14 @@ A `pptxgenjs` helper module, inline in `SKILL.md`, that implements the whole sys
 
 Output is a 16:9 `.pptx`, which imports cleanly into Google Slides.
 
+The official Built Young logos ship with the skill, so every slide gets branded without anyone hunting for a file.
+
 ```
 built-young-slides-style/
-└── SKILL.md    style rules + pptxgenjs helpers
+├── SKILL.md            style rules + pptxgenjs helpers
+└── assets/
+    ├── logo.png        dark-text version, for white slides
+    └── logo-white.png  white-text version, for navy slides
 ```
 
 ## Using it
@@ -50,7 +55,7 @@ Look at every slide. Overflowing text, a missing logo, two orange blocks competi
 
 ## Notes
 
-The logo is never redrawn in code — pass a real file via `logoPath` and `logoDarkPath` (the white-text version for navy slides). Without one, the helpers fall back to set text.
+The logo is never redrawn or recoloured in code. Copy both files out of `assets/` into the working directory and pass them to `makeDeck` as `logoPath` and `logoDarkPath`. If they can't be found, the helpers fall back to a text wordmark — which is the signal that something went wrong, not an acceptable output.
 
 Investing content carries a not-investment-advice line and tells students to talk to a parent before opening a real account. That stays in.
 
